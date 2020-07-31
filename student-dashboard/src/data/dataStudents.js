@@ -3360,3 +3360,5 @@ const dataStudents = [
     funFactor: 3,
   },
 ];
+
+export default dataStudents;

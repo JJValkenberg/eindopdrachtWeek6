@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+body {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
 nav {
   display: flex;
   justify-content: space-around;
@@ -11,12 +15,22 @@ nav {
 }
 
 .nav-links {
-  width: 50%;
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   list-style: none;
   text-decoration: none;
+}
+
+.nav-links li {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.nav-links li:hover {
+  text-decoration: underline;
 }
 
 .student-links {
@@ -32,4 +46,34 @@ nav {
 h1,
 h2 {
   text-align: center;
+}
+
+.legenda {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 20px 0 20px;
+}
+
+.dot-1 {
+  height: 15px;
+  width: 15px;
+  background-color: lime;
+  border-radius: 50%;
+  display: flex;
+  margin: 0 20px 0 10px;
+}
+
+.dot-2 {
+  height: 15px;
+  width: 15px;
+  background-color: red;
+  border-radius: 50%;
+  display: flex;
+  margin: 0 20px 0 10px;
+}
+
+.buttons {
+  margin-top: 10px;
+  margin-left: 30px;
 }

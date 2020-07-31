@@ -8,15 +8,18 @@ import {
   VictoryAxis,
 } from "victory";
 
-function Students(props) {
+function Overview(props) {
   return (
     <div>
-      <h2>Here you can find the of the ratings of: {props.name} </h2>
+      <h2>
+        Here you can find the average of the ratings of all the students in a
+        bar chart{" "}
+      </h2>
       <div className="legenda">
         <span className="dot-2"></span>
-        <span>Difficulty</span>
+        <span> Average difficulty</span>
         <span className="dot-1"></span>
-        <span>Enjoyment</span>
+        <span>Average enjoyment</span>
       </div>
       <VictoryChart
         theme={VictoryTheme.material}
@@ -36,22 +39,23 @@ function Students(props) {
           }}
         />
         <VictoryAxis dependentAxis />
-        <VictoryGroup
-          offset={5}
-          style={{ data: { width: 4 } }}
-          colorScale={["red", "lime"]}
-        >
+        <VictoryGroup offset={5} style={{ data: { width: 4 } }}>
           <VictoryBar
-            data={props.individualDataDifficulty}
+            data={props.averageDifficulty}
             x="x"
             y="y"
             style={{ data: { fill: "red" } }}
           />
-          <VictoryBar data={props.individualDataFunFactor} x="x" y="y" />
+          <VictoryBar
+            data={props.averageFunFactor}
+            x="x"
+            y="y"
+            style={{ data: { fill: "lime" } }}
+          />
         </VictoryGroup>
       </VictoryChart>
     </div>
   );
 }
 
-export default Students;
+export default Overview;
